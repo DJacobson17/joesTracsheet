@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Trac Sheet</title>
+    <link rel="stylesheet" href="numpad-dark.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="tips.js"></script>
+</head>
+<body>
+    <h1>Trac Sheet Helper</h1>
+    <div class="container">
+        <div class="numberInputs">
+            Total Credit Cards: <input type="text" id="totalcc"/><br>
+            Credit Card Tips: <input type="text" id="tipscc"/><br>
+            Gift Certificate Tips: <input type="text" id="tipsgc"/><br>
+            Cash Tips: <input type="text" id="tipscash"/><br> 
+            Cash Sales: <input type="text" id="cashSales"/><br>
+            Busser Tip Out %: <input type="text" id="busser%"/><br>
+        </div>
+        <div class="options">
+            <p>Was there a barista?</p>
+            <input type="radio" name="barista" id="yes" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" name="barista" id="no" value="no">
+            <label for="no">No</label><br>
+
+            <p>Was there a Somm?</p>
+            <input type="radio" name="somm" id="yes" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" name="somm" id="no" value="no">
+            <label for="no">No</label><br>
+
+            <p>Is this a lunch or dinner shift?</p>
+            <input type="radio" name="meal" id="lunch" value="lunch">
+            <label for="lunch">Lunch</label><br>
+            <input type="radio" name="meal" id="dinner" value="dinner">
+            <label for="dinner">Dinner</label><br>
+
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", () => {
+          // (C1) BASIC NUMPAD
+          numpad.attach({target: document.getElementById("totalcc")});
+    
+        });
+        </script>
+</body>
+</html>
 
