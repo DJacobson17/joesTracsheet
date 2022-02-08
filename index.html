@@ -13,12 +13,12 @@
     <h1>Trac Sheet Helper</h1>
     <div class="container">
         <div class="numberInputs">
-            Total Credit Cards: <input type="text" id="totalcc"/><br>
-            Credit Card Tips: <input type="text" id="tipscc"/><br>
-            Gift Certificate Tips: <input type="text" id="tipsgc"/><br>
-            Cash Tips: <input type="text" id="tipscash"/><br> 
-            Cash Sales: <input type="text" id="cashSales"/><br>
-            Busser Tip Out %: <input type="text" id="busser%"/><br>
+            Total Credit Cards: <input type="text" id="totalcc" name="totalcc" size="8"/><br>
+            Credit Card Tips: <input type="text" id="tipscc" name="tipscc" size="8"/><br>
+            Gift Certificate Tips: <input type="text" id="tipsgc" name="tipsgc" size="8"/><br>
+            Cash Tips: <input type="text" id="tipscash" name="tipscash" size="8"/><br> 
+            Cash Sales: <input type="text" id="cashSales" name="cashSales" size="8"/><br>
+            Busser Tip Out %: <input type="text" id="busser%" name="busser%" size="2"/><br>
         </div>
         <div class="options">
             <p>Was there a barista?</p>
@@ -45,6 +45,11 @@
         window.addEventListener("load", () => {
           // (C1) BASIC NUMPAD
           numpad.attach({target: document.getElementById("totalcc")});
+          numpad.attach({target: document.getElementById("tipscc")});
+          numpad.attach({target: document.getElementById("tipsgc")});
+          numpad.attach({target: document.getElementById("tipscash")});
+          numpad.attach({target: document.getElementById("cashSales")});
+          numpad.attach({target: document.getElementById("busser%")});
     
         });
         </script>
