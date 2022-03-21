@@ -10,34 +10,49 @@
     <script src="tips.js"></script>
 </head>
 <body>
+    <form action="">
     <h1>Trac Sheet Helper</h1>
     <div class="container">
+        <fieldset>
+            <legend>Number Inputs</legend>
         <div class="numberInputs">
-            Total Credit Cards: <input type="text" id="totalcc" name="totalcc" size="8"/><br>
-            Credit Card Tips: <input type="text" id="tipscc" name="tipscc" size="8"/><br>
-            Gift Certificate Tips: <input type="text" id="tipsgc" name="tipsgc" size="8"/><br>
-            Cash Tips: <input type="text" id="tipscash" name="tipscash" size="8"/><br> 
-            Cash Sales: <input type="text" id="cashSales" name="cashSales" size="8"/><br>
-            Busser Tip Out %: <input type="text" id="busser%" name="busser%" size="2"/><br>
+            <label for="totalcc">Total Credit Cards:</label>  <input type="number" id="totalcc" name="totalCc" size="8"/><br>
+            <label for="tipsCc">Credit Card Tips:</label>  <input type="number" id="tipsCc" name="tipsCc" size="8"/><br>
+            <label for="tipsGc">Gift Certificate Tips:</label> <input type="number" id="tipsGc" name="tipsgc" size="8"/><br>
+            <label for="tipsCash">Cash Tips:</label> <input type="number" id="tipsCash" name="tipsCash" size="8"/><br> 
+            <label for="cashSales">Cash Sales:</label> <input type="number" id="cashSales" name="cashSales" size="8"/><br>
         </div>
-        <div class="options">
-            <p>Was there a barista?</p>
-            <input type="radio" name="barista" id="yes" value="yes">
-            <label for="yes">Yes</label><br>
-            <input type="radio" name="barista" id="no" value="no">
-            <label for="no">No</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Support Staff</legend>
+                <div class="options">
+                    <label for="busserPer">Busser Tip Out %:</label> <input type="range" id="busserPer" name="busserPer" min="20" max="25" value="20" oninput="busser.value=busserPer.value">
+                    <output name="busser" id="busser" for="busserPer">20</output>
+                    <p>Was there a barista?</p>
+                    <input type="radio" name="barista" id="yes" value="yes" checked>
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" name="barista" id="no" value="no">
+                    <label for="no">No</label><br>
 
-            <p>Was there a Somm?</p>
-            <input type="radio" name="somm" id="yes" value="yes">
-            <label for="yes">Yes</label><br>
-            <input type="radio" name="somm" id="no" value="no">
-            <label for="no">No</label><br>
+                    <p>Was there a Somm?</p>
+                    <input type="radio" name="somm" id="yes" value="yes" checked>
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" name="somm" id="no" value="no">
+                    <label for="no">No</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Shift</legend>
+                    <p>Is this a lunch or dinner shift?</p>
+                    <input type="radio" name="meal" id="lunch" value="lunch">
+                    <label for="lunch">Lunch</label><br>
+                    <input type="radio" name="meal" id="dinner" value="dinner" checked>
+                    <label for="dinner">Dinner</label><br>
+            </fieldset>
 
-            <p>Is this a lunch or dinner shift?</p>
-            <input type="radio" name="meal" id="lunch" value="lunch">
-            <label for="lunch">Lunch</label><br>
-            <input type="radio" name="meal" id="dinner" value="dinner">
-            <label for="dinner">Dinner</label><br>
+        </div>
+    </form>
+        <button onclick="handleClick()">Submit</button>
+        <div class="results">
 
         </div>
     </div>
@@ -45,11 +60,10 @@
         window.addEventListener("load", () => {
           // (C1) BASIC NUMPAD
           numpad.attach({target: document.getElementById("totalcc")});
-          numpad.attach({target: document.getElementById("tipscc")});
-          numpad.attach({target: document.getElementById("tipsgc")});
-          numpad.attach({target: document.getElementById("tipscash")});
+          numpad.attach({target: document.getElementById("tipsCc")});
+          numpad.attach({target: document.getElementById("tipsGc")});
+          numpad.attach({target: document.getElementById("tipsCash")});
           numpad.attach({target: document.getElementById("cashSales")});
-          numpad.attach({target: document.getElementById("busser%")});
     
         });
         </script>

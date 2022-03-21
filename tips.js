@@ -159,4 +159,63 @@ var numpad = {
     }
   };
   window.addEventListener("DOMContentLoaded", numpad.init);
+
+  // Tip Calculations
+  function handleClick(){
+
+    const totalcc = document.getElementById("totalCc");
+    const tipscc = document.getElementById("tipsCc");
+    const tipsgc = document.getElementById("tipsGc");
+    const tipscash = document.getElementById("tipsCash");
+    const cashSales = document.getElementById("cashSales");
+    const busserPercent = document.getElementById("busser%");
+    const rbBarista = document.querySelectorAll('input[name="barista"]');
+    let baristaValue;
+    for (rb of rbBarista) {
+      if (rb.checked) {
+        baristaValue = rb.value;
+        break;
+      }
+    }
+    if (baristaValue === "yes") {
+      baristaTipOut = 3;
+    } else if (baristaValue === "no") {
+      baristaTipOut = 0;
+    } else {
+      alert("Please Select a barista option");
+    }
+    const rbSomm = document.querySelectorAll('input[name="somm"]');
+    let sommValue;
+    for (rb of rbSomm) {
+      if (rb.checked) {
+        sommValue = rb.value;
+        break;
+      }
+    }
+    if (sommValue == "yes") {
+      sommPercent = 0.02;
+    } else if (sommValue == "no") {
+      sommPercent = 0;
+    } else {
+      alert("Please Select a somm option");
+    }
+    const rbMeal = document.querySelectorAll('input[name="meal"]');
+    let mealValue;
+    for (rb of rbMeal) {
+      if (rb.checked) {
+        mealValue = rb.value;
+        break;
+      }
+    }
+    if (mealValue == "lunch") {
+      bartips =  (tipsTotal);
+    } else if (baristaValue == "no") {
+      baristaTipOut = 0;
+    } else {
+      alert("Please Select a barista option");
+    }
   
+    tipsTotal = +(tipscc + tipsgc + tipscash).toFixed(2);
+    cashTipPercent = parseInt((tipscash / cashSales) *100);
+    busserTips = (tipsTotal * busserPercent);
+    }
