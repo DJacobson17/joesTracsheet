@@ -16,9 +16,9 @@
         <fieldset>
             <legend>Number Inputs</legend>
         <div class="numberInputs">
-            <label for="totalcc">Total Credit Cards:</label>  <input type="number" id="totalcc" name="totalCc" size="8"/><br>
+            <label for="totalcc">Total Credit Cards:</label>  <input type="tel" id="totalCc" name="totalCc" size="8"/><br>
             <label for="tipsCc">Credit Card Tips:</label>  <input type="number" id="tipsCc" name="tipsCc" size="8"/><br>
-            <label for="tipsGc">Gift Certificate Tips:</label> <input type="number" id="tipsGc" name="tipsgc" size="8"/><br>
+            <label for="tipsGc">Gift Certificate Tips:</label> <input type="number" id="tipsGc" name="tipsGc" size="8"/><br>
             <label for="tipsCash">Cash Tips:</label> <input type="number" id="tipsCash" name="tipsCash" size="8"/><br> 
             <label for="cashSales">Cash Sales:</label> <input type="number" id="cashSales" name="cashSales" size="8"/><br>
         </div>
@@ -59,7 +59,7 @@
     <script>
         window.addEventListener("load", () => {
           // (C1) BASIC NUMPAD
-          numpad.attach({target: document.getElementById("totalcc")});
+          numpad.attach({target: document.getElementById("totalCc")});
           numpad.attach({target: document.getElementById("tipsCc")});
           numpad.attach({target: document.getElementById("tipsGc")});
           numpad.attach({target: document.getElementById("tipsCash")});

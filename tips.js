@@ -168,8 +168,9 @@ var numpad = {
     const tipsgc = document.getElementById("tipsGc");
     const tipscash = document.getElementById("tipsCash");
     const cashSales = document.getElementById("cashSales");
-    const busserPercent = document.getElementById("busser%");
+    const busserPercent = document.getElementById("busserPer");
     const rbBarista = document.querySelectorAll('input[name="barista"]');
+    const busserTipPercent = busserPercent.value;
     let baristaValue;
     for (rb of rbBarista) {
       if (rb.checked) {
@@ -214,8 +215,8 @@ var numpad = {
     } else {
       alert("Please Select a barista option");
     }
-  
+    
     tipsTotal = +(tipscc + tipsgc + tipscash).toFixed(2);
     cashTipPercent = parseInt((tipscash / cashSales) *100);
-    busserTips = (tipsTotal * busserPercent);
+    busserTips = (tipsTotal * busserTipPercent);
     }
