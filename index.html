@@ -16,11 +16,11 @@
         <fieldset>
             <legend>Number Inputs</legend>
         <div class="numberInputs">
-            <label for="totalcc">Total Credit Cards:</label>  <input type="tel" id="totalCc" name="totalCc" size="8"/><br>
-            <label for="tipsCc">Credit Card Tips:</label>  <input type="tel" id="tipsCc" name="tipsCc" size="8"/><br>
-            <label for="tipsGc">Gift Certificate Tips:</label> <input type="tel" id="tipsGc" name="tipsGc" size="8"/><br>
-            <label for="tipsCash">Cash Tips:</label> <input type="tel" id="tipsCash" name="tipsCash" size="8"/><br> 
-            <label for="cashSales">Cash Sales:</label> <input type="tel" id="cashSales" name="cashSales" size="8"/><br>
+            <label for="totalcc"><span>Total Credit Cards:</span></label>  <input type="tel" id="totalCc" name="totalCc" size="8"/><br>
+            <label for="tipsCc"><span>Credit Card Tips:</span></label>  <input type="tel" id="tipsCc" name="tipsCc" size="8"/><br>
+            <label for="tipsGc"><span>Gift Certificate Tips:</span></label> <input type="tel" id="tipsGc" name="tipsGc" size="8"/><br>
+            <label for="tipsCash"><span>Cash Tips:</span></label> <input type="tel" id="tipsCash" name="tipsCash" size="8"/><br> 
+            <label for="cashSales"><span>Cash Sales:</span></label> <input type="tel" id="cashSales" name="cashSales" size="8"/><br>
         </div>
         </fieldset>
         <fieldset>
@@ -42,7 +42,7 @@
             </fieldset>
             <fieldset>
                 <legend>Shift</legend>
-                    <p>Is this a lunch or dinner shift?</p>
+                    <p id="shift">Is this a lunch or dinner shift?</p>
                     <input type="radio" name="meal" id="lunch" value="lunch">
                     <label for="lunch">Lunch</label><br>
                     <input type="radio" name="meal" id="dinner" value="dinner" checked>
@@ -50,23 +50,25 @@
             </fieldset>
 
         </div>
-    </form>
         <button onclick="handleClick()">Submit</button>
+    </form>
+
         <div class="results">
 
         </div>
     </div>
-    <script>
-        window.addEventListener("load", () => {
-          // (C1) BASIC NUMPAD
-          numpad.attach({target: document.getElementById("totalCc")});
-          numpad.attach({target: document.getElementById("tipsCc")});
-          numpad.attach({target: document.getElementById("tipsGc")});
-          numpad.attach({target: document.getElementById("tipsCash")});
-          numpad.attach({target: document.getElementById("cashSales")});
-    
-        });
-        </script>
 </body>
+<script>
+    window.addEventListener("load", () => {
+      // (C1) BASIC NUMPAD
+      numpad.attach({target: document.getElementById("totalCc")});
+      numpad.attach({target: document.getElementById("tipsCc")});
+      numpad.attach({target: document.getElementById("tipsGc")});
+      numpad.attach({target: document.getElementById("tipsCash")});
+      numpad.attach({target: document.getElementById("cashSales")});
+
+    });
+    </script>
+
 </html>
 
