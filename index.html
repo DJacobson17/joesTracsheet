@@ -25,19 +25,22 @@
         <fieldset>
             <legend>Support Staff</legend>
                 <div class="options">
-                    <label for="busserPer">Busser Tip Out %:</label> <input type="range" id="busserPer" name="busserPer" min="20" max="25" value="20" oninput="busser.value=busserPer.value">
-                    <output name="busser" id="busser" for="busserPer">20</output>
+                    <div class="busser">
+                    <label for="busserPer">Busser Tip Out:</label>
+                    <span class="rangeResult"><output name="busser" id="busser" for="busserPer">20</output>%</span><br>
+                    <input type="range" id="busserPer" name="busserPer" min="20" max="25" value="20" oninput="busser.value=busserPer.value">
+                    </div>
                     <p>Was there a barista?</p>
-                    <input type="radio" name="barista" id="yes" value="yes" checked>
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" name="barista" id="no" value="no">
-                    <label for="no">No</label><br>
+                    <input type="radio" name="barista" id="baristaYes" value="yes" checked>
+                    <label for="baristaYes">Yes</label><br>
+                    <input type="radio" name="barista" id="baristaNo" value="no">
+                    <label for="baristaNo">No</label><br>
 
                     <p>Was there a Somm?</p>
-                    <input type="radio" name="somm" id="yes" value="yes" checked>
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" name="somm" id="no" value="no">
-                    <label for="no">No</label><br>
+                    <input type="radio" name="somm" id="sommYes" value="yes" checked>
+                    <label for="sommYes">Yes</label><br>
+                    <input type="radio" name="somm" id="sommNo" value="no">
+                    <label for="sommNo">No</label><br>
             </fieldset>
             <fieldset>
                 <legend>Shift</legend>
