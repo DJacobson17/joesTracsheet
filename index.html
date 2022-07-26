@@ -15,7 +15,7 @@
         <fieldset>
             <legend>Number Inputs</legend>
         <div class="numberInputs">
-            <label for="totalcc"><span>Total Credit Cards:</span></label>  <input type="number" inputmode="decimal" id="totalCc" name="totalCc" size="8"/><br>
+            <label for="totalcc"><span>Total Credit Card Sales:</span></label>  <input type="number" inputmode="decimal" id="totalCc" name="totalCc" size="8"/><br>
             <label for="tipsCc"><span>Credit Card Tips:</span></label>  <input type="number" inputmode="decimal" id="tipsCc" name="tipsCc" size="8"/><br>
             <label for="tipsGc"><span>Gift Certificate Tips:</span></label> <input type="number" inputmode="decimal" id="tipsGc" name="tipsGc" size="8"/><br>
             <label for="tipsCash"><span>Cash Tips:</span></label> <input type="number" inputmode="decimal" id="tipsCash" name="tipsCash" size="8"/><br> 
@@ -31,15 +31,15 @@
                     <input type="range" id="busserPer" name="busserPer" min="20" max="25" value="20" oninput="busser.value=busserPer.value">
                     </div>
                     <p>Was there a barista?</p>
-                    <input type="radio" name="barista" id="baristaYes" value="yes" checked>
+                    <input type="radio" name="barista" id="baristaYes" value="3" checked>
                     <label for="baristaYes">Yes</label><br>
-                    <input type="radio" name="barista" id="baristaNo" value="no">
+                    <input type="radio" name="barista" id="baristaNo" value="0" >
                     <label for="baristaNo">No</label><br>
 
                     <p>Was there a Somm?</p>
-                    <input type="radio" name="somm" id="sommYes" value="yes" checked>
+                    <input type="radio" name="somm" id="sommYes" value="0.02" checked>
                     <label for="sommYes">Yes</label><br>
-                    <input type="radio" name="somm" id="sommNo" value="no">
+                    <input type="radio" name="somm" id="sommNo" value="0">
                     <label for="sommNo">No</label><br>
             </fieldset>
             <fieldset>
@@ -52,12 +52,24 @@
             </fieldset>
 
         </div>
-        <button onclick="handleClick()">Submit</button>
+        <button type="button" onclick="handleClick()">Submit</button>
+        <div id="results">
+            <p id="ccTipPercent">credit card tip % = </p>
+            <p id="cashTipPercent">cash tip % = </p>
+            <p id="totaltips">total tips = $</p>
+            <p id="barTipout">bartender tipout = $</p>
+            <p id="busserTipout">busser tipout = $</p>
+            <p id="sommTipout">sommelier tipout = $</p>
+            <p id="baristaTipout">barista tipout = $</p>
+            <p id="stockerTipout">stocker tipout = $</p>
+            <p id="runnerTipout">runner tipout = $</p>
+            <p id="totalTipout">total tipout = $</p>
+            <p id="cardTips">card tips received = $</p>
+            <p id="netTips">net tips = $</p>
+        </div>
+
     </form>
 
-        <div class="results">
-
-        </div>
     </div>
 </body>
 </html>
