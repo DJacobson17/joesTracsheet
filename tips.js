@@ -8,7 +8,7 @@
     const tipscash = parseFloat(document.getElementById("tipsCash").value);
     const cashSales = parseFloat(document.getElementById("cashSales").value);
     const busserPercent = (parseInt(document.getElementById("busserPer").value)) / 100;
-    const barista = document.querySelector("input[type=radio][name=barista]:checked").value;
+    const barista = parseInt(document.querySelector("input[type=radio][name=barista]:checked").value);
     let bartips;
     let runner;
     let stocker;
@@ -37,9 +37,10 @@
       busserTips = +(tipsTotal * busserPercent).toFixed(2);
       sommTips = +(tipsTotal * rbSomm).toFixed(2);
       totaltipout = bartips + busserTips + sommTips + barista + stocker + runner;
-      ttto2 = +()
       cardTips = (tipscc + tipsgc) - totaltipout;
+      cardTips = +cardTips.toFixed(2);
       netTips = tipsTotal - totaltipout;
+      netTips = +netTips.toFixed(2);
       console.log(busserTips);
       console.log(cashTipPercent);
 
